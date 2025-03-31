@@ -6,7 +6,7 @@ import { RingCircle } from '@/components/ringCircle/RingCircle';
 
 export const HeroSection = () => {
 	return (
-		<div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+		<div className='py-32 md:py-48 lg:py-55 relative z-0 overflow-x-clip [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
 			<RingCircle />
 
 			<div>
@@ -19,19 +19,18 @@ export const HeroSection = () => {
 					<div className='hero-top-section'>
 						<div className='bg-green-500 size-2.5 rounded-full'></div>
 						<div>
-							<p className='text-sm font-medium'>Available for new challenges </p>
+							<p className='text-sm font-medium'>Available for new challenges</p>
 						</div>
 					</div>
 				</div>
 				<div>
 					<div className='max-w-lg mx-auto'>
 						<h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide '>
-							Building modern websites and applications
+							Making Digital Experiences Great
 						</h1>
-
 						<p className='text-center mt-4 text-white/60 md:text-lg'>
-							I am a software Front-End engineer based in the Brazil. I specialize in building websites and
-							applications that are fast, accessible, and responsive.
+							Welcome to my page! I am a software Front-End engineer based in the Brazil. Innovative
+							front-end solutions driving outstanding user engagement and exceptional performance.
 						</p>
 					</div>
 					<div className='flex flex-col md:flex-row justify-center items-center gap-4'>
