@@ -1,9 +1,9 @@
+import { Cards } from '../cards/cards';
 import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
 import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
-import grainImage from '@/assets/images/grain.jpg';
 import Image from 'next/image';
 
 const portfolioProjects = [
@@ -49,14 +49,9 @@ export function ProjectsContent() {
 	return (
 		<div className='flex flex-col mt-10 md:mt-20 gap-20 '>
 			{portfolioProjects.map((project) => (
-				<div
-					className='card-projects-style'
+				<Cards
+					className='card-projects-style pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20'
 					key={project.title}>
-					<div
-						className='absolute inset-0 -z-10 opacity-5'
-						style={{
-							backgroundImage: `url(${grainImage.src})`,
-						}}></div>
 					<div className='lg:grid lg:grid-cols-2 lg:gap-16 '>
 						<div className='lg:pb-16'>
 							<div className='text-gradients-blue-to-green inline-flex gap-2'>
@@ -95,7 +90,7 @@ export function ProjectsContent() {
 							/>
 						</div>
 					</div>
-				</div>
+				</Cards>
 			))}
 		</div>
 	);
