@@ -6,7 +6,8 @@ import ReacttIcon from '@/assets/icons/react.svg';
 import HtmlIcon from '@/assets/icons/html5.svg';
 import CssIcon from '@/assets/icons/css3.svg';
 import GithubIcon from '@/assets/icons/github.svg';
-import { TechIcon } from '@/components/techIcon/techIcon';
+import { CardHeader } from '@/components/cardHeader/cardHeader';
+import { ToolboxItems } from '@/components/toolboxItems/toolboxItems';
 
 const toolBoxItems = [
 	{
@@ -68,33 +69,27 @@ export const AboutSection = () => {
 					description='Learn more about who I am, what I do, and what inspires me'
 				/>
 				<div className='mt-20'>
-					<Cards>
-						<div className=''>
-							<div className='inline-flex '>
-								<StarIcon className='size-9' />
-								<h3>My Tool Box</h3>
-							</div>
-							<p className=''>
-								Explore the tecnologies and tools I use to craft exceptional digital experiences
-							</p>
-						</div>
-						<div className=''>
-							{toolBoxItems.map((item) => (
-								<div
-									className=''
-									key={item.title}>
-									<TechIcon component={item.iconType} />
-									<span>{item.title}</span>
-								</div>
-							))}
-						</div>
+					<Cards className='h-[320px] p-0 '>
+						<CardHeader
+							title='My Tool Box'
+							description='Explore the tecnologies and tools I use to craft exceptional digital experiences'
+							className='px-6 pt-6'
+						/>
+						<ToolboxItems
+							iconItem={toolBoxItems}
+							className='mt-6 '
+						/>
+						<ToolboxItems
+							iconItem={toolBoxItems}
+							className='mt-6 '
+						/>
 					</Cards>
-					<Cards>
-						<div className=''>
-							<StarIcon />
-							<h3>Beyond the Code</h3>
-							<p className=''> Explore my interests and my hobbies beyond the digital</p>
-						</div>
+					<Cards className='h-[320px]'>
+						<CardHeader
+							title='Beyond the Code'
+							description='Explore my interests and my hobbies beyond the digital world'
+						/>
+
 						<div className=''>
 							{hobbies.map((hobby) => (
 								<div
