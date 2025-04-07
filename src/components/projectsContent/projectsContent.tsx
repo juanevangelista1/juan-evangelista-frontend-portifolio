@@ -1,57 +1,60 @@
 import { Cards } from '../cards/cards';
-import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
-import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
-import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
+import AsicsImage from '@/assets/images/asics-brazil.png';
+import LelloImage from '@/assets/images/lello-imoveis.png';
+import ToDoAppImage from '@/assets/images/to-do-app.png';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import Image from 'next/image';
 
 const portfolioProjects = [
 	{
-		company: 'Acme Corp',
-		year: '2022',
-		title: 'Dark Saas Landing Page',
-		results: [
-			{ title: 'Enhanced user experience by 40%' },
-			{ title: 'Improved site speed by 50%' },
-			{ title: 'Increased mobile traffic by 35%' },
-		],
-		link: 'https://youtu.be/4k7IdSLxh6w',
-		image: darkSaasLandingPage,
-	},
-	{
-		company: 'Innovative Co',
-		year: '2021',
-		title: 'Light Saas Landing Page',
-		results: [
-			{ title: 'Boosted sales by 20%' },
-			{ title: 'Expanded customer reach by 35%' },
-			{ title: 'Increased brand awareness by 15%' },
-		],
-		link: 'https://youtu.be/7hi5zwO75yc',
-		image: lightSaasLandingPage,
-	},
-	{
-		company: 'Quantum Dynamics',
+		company: 'Asics Brazil',
 		year: '2023',
-		title: 'AI Startup Landing Page',
+		title: 'Asics Brazil',
 		results: [
-			{ title: 'Enhanced user experience by 40%' },
-			{ title: 'Improved site speed by 50%' },
-			{ title: 'Increased mobile traffic by 35%' },
+			{ title: 'Maintenance and evolution of the site' },
+			{ title: 'Improving performance by 40%' },
+			{ title: 'Constant evolution to ensure a better user experience' },
 		],
-		link: 'https://youtu.be/Z7I5uSRHMHg',
-		image: aiStartupLandingPage,
+		link: 'https://www.asics.com.br',
+		image: AsicsImage,
+	},
+	{
+		company: 'Lello Imóveis',
+		year: '2024',
+		title: 'Front-End Engineer at Lello Imóveis',
+		results: [
+			{ title: 'Maintained and monitored the site' },
+			{ title: 'Increased performance by 28%' },
+			{ title: 'Increased SEO and search engine positioning' },
+		],
+		link: 'https://www.lelloimoveis.com.br/',
+		image: LelloImage,
+	},
+	{
+		company: 'Pessoal Project',
+		year: '2024',
+		title: 'To Do App',
+		results: [
+			{ title: 'Personal project for daily activities' },
+			{ title: 'Use of architecture best practices' },
+			{ title: 'Project focus on daily productivity' },
+		],
+		link: 'https://to-do-app-roan-seven.vercel.app/',
+		image: ToDoAppImage,
 	},
 ];
 
 export function ProjectsContent() {
 	return (
-		<div className='flex flex-col mt-10 md:mt-20 gap-20 '>
-			{portfolioProjects.map((project) => (
+		<div className='flex flex-col mt-10 md:mt-20 gap-20'>
+			{portfolioProjects.map((project, projectIndex) => (
 				<Cards
-					className='card-projects-style pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20'
-					key={project.title}>
+					className='card-projects-style pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky'
+					key={project.title}
+					style={{
+						top: `calc(64px + ${projectIndex * 40}px)`,
+					}}>
 					<div className='lg:grid lg:grid-cols-2 lg:gap-16 '>
 						<div className='lg:pb-16'>
 							<div className='text-gradients-blue-to-green inline-flex gap-2'>

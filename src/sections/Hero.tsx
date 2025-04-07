@@ -17,7 +17,9 @@ export const HeroSection = () => {
 						alt='Person peeking behind laptop'
 					/>
 					<div className='hero-top-section'>
-						<div className='bg-green-500 size-2.5 rounded-full'></div>
+						<div className='bg-green-500 size-2.5 rounded-full relative'>
+							<div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large '></div>
+						</div>
 						<div>
 							<p className='text-sm font-medium'>Available for new challenges</p>
 						</div>
@@ -34,14 +36,26 @@ export const HeroSection = () => {
 						</p>
 					</div>
 					<div className='flex flex-col md:flex-row justify-center items-center gap-4'>
-						<button className='hero-button border-white/25'>
+						<a
+							href='#projects'
+							className='hero-button border-white/25
+                              hover:bg-white/90 hover:text-gray-900
+                              transition-all duration-300 flex items-center gap-2'>
 							<span className='font-semibold'>Explore My Work</span>
-							<ArrowDown className='size-4 ' />
-						</button>
-						<button className='hero-button border-white bg-white text-gray-900'>
-							<span>👋</span>
-							<span className='font-semibold'>Let&apos;s Connect</span>
-						</button>
+							<ArrowDown className='size-4' />
+						</a>
+
+						<a
+							href='https://www.linkedin.com/in/juan-evangelista-desenvolvedor/'
+							target='_blank'
+							rel='noopener noreferrer'>
+							<button
+								className='hero-button border-white/90 bg-white text-gray-900 cursor-pointer
+               hover:bg-gray-900 hover:text-white transition-all duration-300 scroll-smooth'>
+								<span>👋</span>
+								<span className='font-semibold'>Let’s Connect</span>
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>

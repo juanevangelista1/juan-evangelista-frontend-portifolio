@@ -4,6 +4,9 @@
 
 
 @layer base {
+    html {
+        @apply scroll-smooth;
+      }
     .nav-item {
         @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
     }
@@ -14,7 +17,7 @@
         @apply inline-flex items-center gap-2 border  px-6 rounded-xl h-12 mt-4;
     }
     .hero-circle {
-        @apply absolute inset-0  border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+        @apply absolute inset-0  border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5 -z-30;
     }
     .animation-shorter {
         @apply animate-spin [animation-duration:5s];
@@ -34,6 +37,9 @@
     .mask-image {
        @apply [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
     }
+    .mask-radial-gradient {
+        @apply [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)]
+    }
 }
 
 @layers utilities {
@@ -41,3 +47,4 @@
         @apply lg:max-w-5xl ;
     }
 }
+

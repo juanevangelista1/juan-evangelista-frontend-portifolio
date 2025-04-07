@@ -13,7 +13,7 @@ export function SectionHeader({
 				<p className='text-gradients-blue-to-green text-center font-semibold'>{eyebrow}</p>
 			</div>
 			<h2 className='title-project-section'>{title}</h2>
-			<p className='text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto '>
+			<p className='text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-2xl mx-auto '>
 				{description}
 			</p>
 		</>
