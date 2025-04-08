@@ -9,11 +9,9 @@ import GithubIcon from '@/assets/icons/github.svg';
 import TypescriptIcon from '@/assets/icons/typescript_icon.svg';
 import SeoIcon from '@/assets/icons/SEO_icon.svg';
 import PerfomanceIcon from '@/assets/icons/performance-icon.svg';
-
 import { CardHeader } from '@/components/cardHeader/cardHeader';
 import { ToolboxItems } from '@/components/toolboxItems/toolboxItems';
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { HobbiesItems } from '@/components/hobbiesItems';
 
 const toolBoxItems = [
 	{
@@ -50,59 +48,10 @@ const toolBoxItems = [
 	},
 ];
 
-const hobbies = [
-	{
-		title: 'Travel',
-		emoji: '🏝️',
-		left: '5%',
-		top: '5%',
-	},
-	{
-		title: 'Play Soccer',
-		emoji: '⚽',
-		left: '50%',
-		top: '5%',
-	},
-
-	{
-		title: 'Nature',
-		emoji: '🌳',
-		left: '45%',
-		top: '70%',
-	},
-
-	{
-		title: 'Exercises',
-		emoji: '🏋️‍♂️',
-		left: '35%',
-		top: '40%',
-	},
-	{
-		title: 'Gaming',
-		emoji: '🕹️',
-		left: '70%',
-		top: '45%',
-	},
-	{
-		title: 'Netflix',
-		emoji: '📺',
-		left: '5%',
-		top: '65%',
-	},
-	{
-		title: 'Music',
-		emoji: '🎵',
-		left: '10%',
-		top: '35%',
-	},
-];
-
 export const AboutSection = () => {
-	const constrainRef = useRef(null);
-
 	return (
 		<section
-			className='py-20 lg:py-28'
+			className='my-20 lg:py-28 '
 			id='about'>
 			<div className='container'>
 				<SectionHeader
@@ -129,6 +78,44 @@ export const AboutSection = () => {
 								itemsWrapperClassName='animate-move-right [animation-duration:35s]'
 							/>
 						</Cards>
+						<Cards className='lg:h-[320px] md:h-[320px] h-[400px] p-0 flex flex-col lg:col-span-1'>
+							<CardHeader
+								title='Hard Skills'
+								description='Know me better through my hard skills'
+								className='px-6'
+							/>
+
+							<div className='relative'>
+								<div className='inline-flex items-center gap-2 px-6'>
+									<span className='font-medium  text-gray-300'>
+										With over 3 years in Front-End, I've specialized in JavaScript, React.js, TypeScript,
+										Next.js, and more. I focus on creating user-friendly, high-performance applications that
+										not only meet user needs but also provide exceptional experiences. Writing clean,
+										efficient code is a priority for me, ensuring maintainability and scalability.
+									</span>
+								</div>
+							</div>
+						</Cards>
+
+						<Cards className='lg:h-[320px] md:h-[320px] h-[450px] p-0 flex flex-col lg:col-span-1'>
+							<CardHeader
+								title='Soft Skills'
+								description='Know me better through my soft skills'
+								className='px-6'
+							/>
+
+							<div className='relative'>
+								<div className='inline-flex items-center gap-2 px-6'>
+									<span className='font-medium  text-gray-300'>
+										Beyond technical skills, I'm proactive, resilient, and detail-oriented. I thrive on
+										solving complex problems and continuously seek growth opportunities. Colleagues have noted
+										my empathy and collaborative spirit, highlighting my ability to address challenges
+										transparently and efficiently. If you're looking for a dedicated professional passionate
+										about quality and innovation, I'd love to connect and explore potential collaborations.
+									</span>
+								</div>
+							</div>
+						</Cards>
 						<Cards className='h-[320px] p-0 flex flex-col lg:col-span-1.5'>
 							<CardHeader
 								title='Beyond the Code'
@@ -136,24 +123,14 @@ export const AboutSection = () => {
 								className='px-6 pt-6'
 							/>
 
-							<div
-								className='relative flex-1'
-								ref={constrainRef}>
-								{hobbies.map((hobby) => (
-									<motion.div
-										className='inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 py-1.5 rounded-full absolute '
-										key={hobby.title}
-										style={{
-											left: hobby.left,
-											top: hobby.top,
-										}}
-										drag
-										dragConstraints={constrainRef}>
-										<span className='font-medium text-gray-950'>{hobby.title}</span>
-										<span className=''>{hobby.emoji}</span>
-									</motion.div>
-								))}
-							</div>
+							<HobbiesItems
+								className='mt-6'
+								itemsWrapperClassName='animate-move-right [animation-duration:35s]'
+							/>
+							<HobbiesItems
+								className='mt-6'
+								itemsWrapperClassName='animate-move-left [animation-duration:35s]'
+							/>
 						</Cards>
 					</div>
 				</div>

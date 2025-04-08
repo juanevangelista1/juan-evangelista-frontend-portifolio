@@ -2,7 +2,7 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 
 export const ContactSection = () => {
 	return (
-		<div className='py-16 pt-12'>
+		<div className='py-16 pt-12 '>
 			<div className='container'>
 				<div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 rounded-3xl py-8 px-10 text-center md:text-left'>
 					<div className='flex flex-col md:flex-row lg:flex-row md:gap-16 gap-8 items-center'>
@@ -14,12 +14,15 @@ export const ContactSection = () => {
 							</p>
 						</div>
 
-						<div className=''>
+						<a
+							href='https://www.linkedin.com/in/juan-evangelista-desenvolvedor/'
+							target='_blank'
+							rel='noopener noreferrer'>
 							<button className='text-white bg-gray-900 rounded-xl px-6 py-2 h-12 w-max inline-flex items-center gap-2 hover:bg-gray-800 transition duration-300'>
 								<span className='font-semibold'>Contact Me</span>
 								<ArrowUpRightIcon className='size-4 ' />
 							</button>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
