@@ -1,7 +1,7 @@
 import { Cards } from '../cards/cards';
 import AsicsImage from '@/assets/images/asics-brazil.png';
 import LelloImage from '@/assets/images/lello-imoveis.png';
-import ToDoAppImage from '@/assets/images/to-do-app.png';
+import ToDoAppImage from '@/assets/images/To-do-app.png';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import Image from 'next/image';
