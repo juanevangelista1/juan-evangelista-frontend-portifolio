@@ -7,10 +7,12 @@ export const ContactSection = () => {
 				<div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 rounded-3xl py-8 px-10 text-center md:text-left'>
 					<div className='flex flex-col md:flex-row lg:flex-row md:gap-16 gap-8 items-center'>
 						<div className=''>
-							<h2 className='font-serif text-2xl md:text-3xl'>Let's create something amazing together</h2>
+							<h2 className='font-serif text-2xl md:text-3xl'>
+								Let&apos;s create something amazing together
+							</h2>
 							<p className='text-sm md:text-base mt-2'>
-								If you're looking for a committed, results-oriented professional to improve your digital
-								solutions, get in touch. Let's talk! 🚀
+								If you&apos;re looking for a committed, results-oriented professional to improve your
+								digital solutions, get in touch. Let's talk! 🚀
 							</p>
 						</div>
 

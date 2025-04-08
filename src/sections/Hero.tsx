@@ -54,7 +54,7 @@ export const HeroSection = () => {
 							<span className='text-gradients-blue-to-green capitalize font-semibold'>
 								Juan Evangelista
 							</span>{' '}
-							and I am a{' '}
+							and I&apos;m a{' '}
 							<span className='text-gradients-blue-to-green capitalize font-semibold'>
 								Front-End engineer{' '}
 							</span>
