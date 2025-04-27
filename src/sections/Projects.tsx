@@ -1,13 +1,23 @@
+'use client';
+
 import { ProjectsContent } from '@/components/projectsContent/projectsContent';
 import { SectionHeader } from '@/components/sectionHeader/sectionHeader';
+import { motion } from 'framer-motion';
 
 export const ProjectsSection = () => {
 	return (
 		<section
 			className='pb-16 lg:py-24 '
 			id='projects'>
-			<div className='container'>
-				<div>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+				className='container'>
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1 }}>
 					<SectionHeader
 						eyebrow='Real World Results'
 						title='Featured Projects'
@@ -15,8 +25,8 @@ export const ProjectsSection = () => {
 					/>
 
 					<ProjectsContent />
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</section>
 	);
 };

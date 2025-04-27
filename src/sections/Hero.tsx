@@ -6,6 +6,7 @@ import { useTypewriter } from 'nextjs-simple-typewriter';
 import ArrowDown from '../assets/icons/arrow-down.svg';
 import { RingCircle } from '@/components/ringCircle/RingCircle';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const HeroSection = () => {
 	const [text] = useTypewriter({
@@ -25,11 +26,22 @@ export const HeroSection = () => {
 		delaySpeed: 2000,
 	});
 	return (
-		<div className='py-32 md:py-48 lg:py-55 relative z-0 overflow-x-clip [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] '>
+		<motion.div
+			initial={{ opacity: 0, y: 30 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			className='py-32 md:py-48 lg:py-55 relative z-0 overflow-x-clip [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] '>
 			<RingCircle />
 
-			<div>
-				<div className='flex flex-col items-center'>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}>
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1 }}
+					className='flex flex-col items-center'>
 					<Image
 						className='size-[100px]'
 						src={memojiImage}
@@ -43,9 +55,16 @@ export const HeroSection = () => {
 							<p className='text-sm font-medium'>Available for new challenges</p>
 						</div>
 					</div>
-				</div>
-				<div>
-					<div className='max-w-lg mx-auto'>
+				</motion.div>
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1 }}>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						className='max-w-lg mx-auto'>
 						<h1 className='font-serif text-3xl md:text-5xl text-center mt-4 mb-8 tracking-wide lg:h-[100px] md:h-[100px] h-[65px]'>
 							{text}
 						</h1>
@@ -60,8 +79,12 @@ export const HeroSection = () => {
 							</span>
 							from Brazil. Explore a little about me, my work, and how I can help your team grow!
 						</p>
-					</div>
-					<div className='flex flex-col md:flex-row justify-center items-center gap-4 mt-2 '>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						className='flex flex-col md:flex-row justify-center items-center gap-4 mt-2 '>
 						<a
 							href='#projects'
 							className='hero-button border-white/25
@@ -82,9 +105,9 @@ export const HeroSection = () => {
 								<span className='font-semibold'>Let’s Connect</span>
 							</button>
 						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+					</motion.div>
+				</motion.div>
+			</motion.div>
+		</motion.div>
 	);
 };

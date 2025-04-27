@@ -1,3 +1,4 @@
+'use client';
 import { Cards } from '../cards/cards';
 import AsicsImage from '@/assets/images/asics-brazil.png';
 import LelloImage from '@/assets/images/lello-imoveis.png';
@@ -5,6 +6,7 @@ import ToDoAppImage from '@/assets/images/To-do-app.png';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const portfolioProjects = [
 	{
@@ -47,7 +49,11 @@ const portfolioProjects = [
 
 export function ProjectsContent() {
 	return (
-		<div className='flex flex-col mt-10 md:mt-20 gap-20'>
+		<motion.div
+			initial={{ opacity: 0, y: 30 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			className='flex flex-col mt-10 md:mt-20 gap-20'>
 			{portfolioProjects.map((project, projectIndex) => (
 				<Cards
 					className='card-projects-style pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky'
@@ -55,13 +61,25 @@ export function ProjectsContent() {
 					style={{
 						top: `calc(64px + ${projectIndex * 40}px)`,
 					}}>
-					<div className='lg:grid lg:grid-cols-2 lg:gap-16 '>
-						<div className='lg:pb-16'>
-							<div className='text-gradients-blue-to-green inline-flex gap-2'>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						className='lg:grid lg:grid-cols-2 lg:gap-16 '>
+						<motion.div
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 1 }}
+							className='lg:pb-16'>
+							<motion.div
+								initial={{ opacity: 0, y: 30 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 1 }}
+								className='text-gradients-blue-to-green inline-flex gap-2'>
 								<span className='font-bold text-sm'>{project.company}</span>
 								<span>&bull;</span>
 								<span className='font-bold text-sm'>{project.year}</span>
-							</div>
+							</motion.div>
 
 							<h3 className='font-serif text-2xl mt-2 md:text-4xl md:mt-5'>{project.title}</h3>
 							<hr className='border-t-2 border-white/5 mt-4 md:mt-5' />
@@ -84,17 +102,21 @@ export function ProjectsContent() {
 									<ArrowUpRightIcon className='size-4 ' />
 								</button>
 							</a>
-						</div>
-						<div className='relative'>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 1 }}
+							className='relative'>
 							<Image
 								className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
 								src={project.image}
 								alt={project.title}
 							/>
-						</div>
-					</div>
+						</motion.div>
+					</motion.div>
 				</Cards>
 			))}
-		</div>
+		</motion.div>
 	);
 }

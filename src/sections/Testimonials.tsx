@@ -1,3 +1,4 @@
+'use client';
 import memojiAvatar1 from '@/assets/images/memoji-avatar-1.png';
 import memojiAvatar2 from '@/assets/images/memoji-avatar-2.png';
 import memojiAvatar3 from '@/assets/images/memoji-avatar-3.png';
@@ -7,6 +8,7 @@ import { SectionHeader } from '@/components/sectionHeader/sectionHeader';
 import Image from 'next/image';
 import { Cards } from '@/components/cards/cards';
 import { Fragment } from 'react';
+import { motion } from 'framer-motion';
 
 const testimonials = [
 	{
@@ -41,42 +43,70 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
 	return (
-		<div className='py-16 lg:py-24 '>
-			<div className='container'>
+		<motion.div
+			initial={{ opacity: 0, y: 30 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			className='py-16 lg:py-24 '>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+				className='container'>
 				<SectionHeader
 					eyebrow='Recommendations'
 					title='What my Collegues say about me:'
 					description='Find out what my colleagues say about me and my work'
 				/>
-				<div className='mt-12 lg:mt-20 flex overflow-x-clip mask-image py-4 -my-4'>
-					<div className='flex flex-none gap-8 pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]'>
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1 }}
+					className='mt-12 lg:mt-20 flex overflow-x-clip mask-image py-4 -my-4'>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						className='flex flex-none gap-8 pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]'>
 						{[...new Array(2)].fill(0).map((_, index) => (
 							<Fragment key={index}>
 								{testimonials.map((testimonial) => (
 									<Cards
 										key={testimonial.name}
 										className='max-w-xs md:p-8 md:max-w-md transform transition-transform duration-300 ease-in-out hover:scale-105'>
-										<div className='flex gap-4 items-center'>
-											<div className='size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0'>
+										<motion.div
+											initial={{ opacity: 0, y: 30 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 1 }}
+											className='flex gap-4 items-center'>
+											<motion.div
+												initial={{ opacity: 0, y: 30 }}
+												animate={{ opacity: 1, y: 0 }}
+												transition={{ duration: 1 }}
+												className='size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0'>
 												<Image
 													src={testimonial.avatar}
 													alt={`${testimonial.name}'s avatar`}
 													className='max-h-full'
 												/>
-											</div>
-											<div className=''>
+											</motion.div>
+											<motion.div
+												initial={{ opacity: 0, y: 30 }}
+												animate={{ opacity: 1, y: 0 }}
+												transition={{ duration: 1 }}
+												className=''>
 												<h3 className='text-lg font-semibold text-white'>{testimonial.name}</h3>
 												<p className='text-sm text-white/40'>{testimonial.position}</p>
-											</div>
-										</div>
+											</motion.div>
+										</motion.div>
 										<p className='mt-4 md:mt-6 md:text-base text-sm text-gray-300'>{testimonial.text}</p>
 									</Cards>
 								))}
 							</Fragment>
 						))}
-					</div>
-				</div>
-			</div>
-		</div>
+					</motion.div>
+				</motion.div>
+			</motion.div>
+		</motion.div>
 	);
 };

@@ -1,12 +1,42 @@
+'use client';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
+import ContactForm from '@/components/contactForm';
+import { motion } from 'framer-motion';
 
 export const ContactSection = () => {
 	return (
-		<div className='py-16 pt-12 '>
-			<div className='container'>
-				<div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 rounded-3xl py-8 px-10 text-center md:text-left'>
-					<div className='flex flex-col md:flex-row lg:flex-row md:gap-16 gap-8 items-center'>
-						<div className=''>
+		<motion.div
+			initial={{ opacity: 0, y: 30 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			className='py-16 pt-12 '>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+				className='py-16 container'>
+				<ContactForm />
+			</motion.div>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+				className='container'>
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1 }}
+					className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 rounded-3xl py-8 px-10 text-center md:text-left'>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						className='flex flex-col md:flex-row lg:flex-row md:gap-16 gap-8 items-center'>
+						<motion.div
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 1 }}
+							className=''>
 							<h2 className='font-serif text-2xl md:text-3xl'>
 								Let&apos;s create something amazing together
 							</h2>
@@ -14,7 +44,7 @@ export const ContactSection = () => {
 								If you&apos;re looking for a committed, results-oriented professional to improve your
 								digital solutions, get in touch. Let's talk! 🚀
 							</p>
-						</div>
+						</motion.div>
 
 						<a
 							href='https://www.linkedin.com/in/juan-evangelista-desenvolvedor/'
@@ -25,9 +55,9 @@ export const ContactSection = () => {
 								<ArrowUpRightIcon className='size-4 ' />
 							</button>
 						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+					</motion.div>
+				</motion.div>
+			</motion.div>
+		</motion.div>
 	);
 };

@@ -12,6 +12,7 @@ import PerfomanceIcon from '@/assets/icons/performance-icon.svg';
 import { CardHeader } from '@/components/cardHeader/cardHeader';
 import { ToolboxItems } from '@/components/toolboxItems/toolboxItems';
 import { HobbiesItems } from '@/components/hobbiesItems';
+import { motion } from 'framer-motion';
 
 const toolBoxItems = [
 	{
@@ -53,14 +54,26 @@ export const AboutSection = () => {
 		<section
 			className='my-20 lg:py-28 '
 			id='about'>
-			<div className='container'>
+			<motion.div
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+				className='container'>
 				<SectionHeader
 					eyebrow='About me:'
 					title='Get to know me better:'
 					description='Learn more about who I am, what I do, and what inspires me'
 				/>
-				<div className='mt-20 flex flex-col gap-8'>
-					<div className='grid grid-cols-1 gap-8 lg:grid lg:grid-cols-2 lg:gap-8'>
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1 }}
+					className='mt-20 flex flex-col gap-8'>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						className='grid grid-cols-1 gap-8 lg:grid lg:grid-cols-2 lg:gap-8'>
 						<Cards className='h-[320px] p-0 lg:col-span-1'>
 							<CardHeader
 								title='My Tool Box'
@@ -85,16 +98,24 @@ export const AboutSection = () => {
 								className='px-6'
 							/>
 
-							<div className='relative'>
-								<div className='inline-flex items-center gap-2 px-6'>
+							<motion.div
+								initial={{ opacity: 0, y: 30 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 1 }}
+								className='relative'>
+								<motion.div
+									initial={{ opacity: 0, y: 30 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ duration: 1 }}
+									className='inline-flex items-center gap-2 px-6'>
 									<span className='font-medium  text-gray-300'>
 										With over 3 years in Front-End, I've specialized in JavaScript, React.js, TypeScript,
 										Next.js, and more. I focus on creating user-friendly, high-performance applications that
 										not only meet user needs but also provide exceptional experiences. Writing clean,
 										efficient code is a priority for me, ensuring maintainability and scalability.
 									</span>
-								</div>
-							</div>
+								</motion.div>
+							</motion.div>
 						</Cards>
 
 						<Cards className='lg:h-[320px] md:h-[320px] h-[450px] p-0 flex flex-col lg:col-span-1'>
@@ -104,8 +125,16 @@ export const AboutSection = () => {
 								className='px-6'
 							/>
 
-							<div className='relative'>
-								<div className='inline-flex items-center gap-2 px-6'>
+							<motion.div
+								initial={{ opacity: 0, y: 30 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 1 }}
+								className='relative'>
+								<motion.div
+									initial={{ opacity: 0, y: 30 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ duration: 1 }}
+									className='inline-flex items-center gap-2 px-6'>
 									<span className='font-medium  text-gray-300'>
 										Beyond technical skills, I'm proactive, resilient, and detail-oriented. I thrive on
 										solving complex problems and continuously seek growth opportunities. Colleagues have noted
@@ -113,8 +142,8 @@ export const AboutSection = () => {
 										transparently and efficiently. If you're looking for a dedicated professional passionate
 										about quality and innovation, I'd love to connect and explore potential collaborations.
 									</span>
-								</div>
-							</div>
+								</motion.div>
+							</motion.div>
 						</Cards>
 						<Cards className='h-[320px] p-0 flex flex-col lg:col-span-1.5'>
 							<CardHeader
@@ -132,9 +161,9 @@ export const AboutSection = () => {
 								itemsWrapperClassName='animate-move-left [animation-duration:35s]'
 							/>
 						</Cards>
-					</div>
-				</div>
-			</div>
+					</motion.div>
+				</motion.div>
+			</motion.div>
 		</section>
 	);
 };
