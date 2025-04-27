@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## README
 
-## Getting Started
+```markdown
+# Portfolio Pessoal — Juan Evangelista
 
-First, run the development server:
+Bem-vindo ao repositório do meu site pessoal! Este projeto é uma vitrine das minhas habilidades como **Front-End Engineer**, meus projetos em destaque, depoimentos de colegas e formas de contato.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📋 Sumário
+
+- [Sobre o Projeto](#sobre-o-projeto)  
+- [Demonstração ao Vivo](#demonstração-ao-vivo)  
+- [Tecnologias](#tecnologias)  
+- [Funcionalidades](#funcionalidades)  
+- [Instalação e Uso](#instalação-e-uso)  
+- [Scripts Disponíveis](#scripts-disponíveis)  
+- [Autor](#autor)  
+- [Licença](#licença)  
+
+---
+
+## Sobre o Projeto
+
+Meu site pessoal apresenta:
+
+- **Home** com introdução e efeito de digitação para destacar meu nome e função.  
+- **Featured Projects** mostrando trabalhos reais com métricas de performance e links para sites ao vivo.  
+- **Recommendations**, depoimentos de colegas de equipe e líderes que reforçam minhas soft skills e entregas.  
+- **About Me**, seção detalhando minhas hard & soft skills, além de hobbies e interesses.  
+- **Contact**, link para meu LinkedIn e GitHub para facilitar networking.
+
+O site foi construído para demonstrar minhas competências em projetos reais, design limpo e navegação intuitiva.
+
+---
+
+## Demonstração ao Vivo
+
+Acesse o site em:  
+🌐 https://juan-evangelista-dev-frontend.vercel.app/
+
+---
+
+## Tecnologias
+
+- **Framework:** Next.js (v14.2.5)  
+- **Linguagens:** TypeScript, JavaScript, HTML5, CSS3  
+- **Estilização:** Tailwind CSS, tailwind-merge  
+- **Animações:** Framer Motion  
+- **Efeitos de Texto:** nextjs-simple-typewriter, react-typed  
+- **SVG:** @svgr/webpack  
+
+---
+
+## Funcionalidades
+
+- Animação de digitação na seção inicial.  
+- Galeria responsiva de projetos com cards e imagens.  
+- Indicadores de performance e SEO destacados.  
+- Depoimentos em carrossel com fotos e citações.  
+- Seção de habilidades com categorização de hard & soft skills.  
+- Links dinâmicos para LinkedIn, GitHub e sites ao vivo.  
+
+---
+
+## Instalação e Uso
+
+1. **Clone o repositório**  
+   ```bash
+   git clone https://github.com/juan-evangelista-dev-frontend/portfolio-site-2.git
+   cd portfolio-site-2
+   ```
+
+2. **Instale as dependências**  
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
+
+3. **Inicie em modo de desenvolvimento**  
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+   Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+4. **Build para produção**  
+   ```bash
+   npm run build
+   # ou
+   yarn build
+   ```
+
+5. **Inicie o servidor**  
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
+
+---
+
+## Scripts Disponíveis
+
+- **`npm run dev`**: Inicia o servidor em modo de desenvolvimento.  
+- **`npm run build`**: Gera a versão otimizada para produção.  
+- **`npm run start`**: Executa o build em um servidor Node.js.  
+- **`npm run lint`**: Analisa código com ESLint.  
+
+---
+
+## Autor
+
+- **Juan Evangelista Nascimento**  
+  Front-End Engineer  
+  - LinkedIn: https://www.linkedin.com/in/juan-evangelista-nascimento  
+  - GitHub: https://github.com/juan-evangelista-dev  
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Description
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+O site de portfólio de Juan Evangelista é uma aplicação Next.js responsiva que apresenta sua trajetória e habilidades como Front-End Engineer. Com animações suaves em Framer Motion e efeitos de digitação usando `nextjs-simple-typewriter`, o site destaca projetos reais (Asics Brazil, Lello Imóveis, To Do App), resultados de performance (melhora de até 40%), e depoimentos de colegas. As seções “About” e “Recommendations” reúnem hard e soft skills, enquanto o rodapé fornece links diretos para LinkedIn e GitHub. Construído com TypeScript, Tailwind CSS e otimizado para SEO e performance, o projeto serve como prova de expertise em criar experiências web elegantes, rápidas e de fácil manutenção.
