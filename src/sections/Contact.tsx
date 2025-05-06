@@ -10,13 +10,13 @@ export const ContactSection = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1 }}
 			className='py-16 pt-12 '>
-			<motion.div
+			{/* <motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1 }}
 				className='py-16 container'>
 				<ContactForm />
-			</motion.div>
+			</motion.div> */}
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
