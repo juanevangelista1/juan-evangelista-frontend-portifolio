@@ -1,132 +1,138 @@
-## README
+# Juan Evangelista — Personal Portfolio
 
-```markdown
-# Portfolio Pessoal — Juan Evangelista
-
-Bem-vindo ao repositório do meu site pessoal! Este projeto é uma vitrine das minhas habilidades como **Front-End Engineer**, meus projetos em destaque, depoimentos de colegas e formas de contato.
+Welcome to my personal portfolio repository! This project showcases my skills as a **Front-End Engineer**, featuring my highlighted projects, colleague testimonials, and contact information.
 
 ---
 
-## 📋 Sumário
+## 📋 Table of Contents
 
-- [Sobre o Projeto](#sobre-o-projeto)  
-- [Demonstração ao Vivo](#demonstração-ao-vivo)  
-- [Tecnologias](#tecnologias)  
-- [Funcionalidades](#funcionalidades)  
-- [Instalação e Uso](#instalação-e-uso)  
-- [Scripts Disponíveis](#scripts-disponíveis)  
-- [Autor](#autor)  
-- [Licença](#licença)  
-
----
-
-## Sobre o Projeto
-
-Meu site pessoal apresenta:
-
-- **Home** com introdução e efeito de digitação para destacar meu nome e função.  
-- **Featured Projects** mostrando trabalhos reais com métricas de performance e links para sites ao vivo.  
-- **Recommendations**, depoimentos de colegas de equipe e líderes que reforçam minhas soft skills e entregas.  
-- **About Me**, seção detalhando minhas hard & soft skills, além de hobbies e interesses.  
-- **Contact**, link para meu LinkedIn e GitHub para facilitar networking.
-
-O site foi construído para demonstrar minhas competências em projetos reais, design limpo e navegação intuitiva.
+- [About the Project](#about-the-project)
+- [Live Demo](#live-demo)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Installation and Usage](#installation-and-usage)
+- [Available Scripts](#available-scripts)
+- [Author](#author)
+- [License](#license)
 
 ---
 
-## Demonstração ao Vivo
+## About the Project
 
-Acesse o site em:  
+My personal website features:
+
+- **Home** section with an introduction and typewriter effect highlighting my name and role
+- **Featured Projects** showcasing real-world work with performance metrics and live site links
+- **Recommendations** section with testimonials from team members and leaders reinforcing my soft skills and deliverables
+- **About Me** section detailing my hard & soft skills, along with hobbies and interests
+- **Contact** section with direct links to LinkedIn and GitHub for easy networking
+
+The site was built to demonstrate my competencies in real projects, clean design, and intuitive navigation.
+
+---
+
+## Live Demo
+
+Access the website at:  
 🌐 https://juan-evangelista-dev-frontend.vercel.app/
 
 ---
 
-## Tecnologias
+## Technologies
 
-- **Framework:** Next.js (v14.2.5)  
-- **Linguagens:** TypeScript, JavaScript, HTML5, CSS3  
-- **Estilização:** Tailwind CSS, tailwind-merge  
-- **Animações:** Framer Motion  
-- **Efeitos de Texto:** nextjs-simple-typewriter, react-typed  
-- **SVG:** @svgr/webpack  
-
----
-
-## Funcionalidades
-
-- Animação de digitação na seção inicial.  
-- Galeria responsiva de projetos com cards e imagens.  
-- Indicadores de performance e SEO destacados.  
-- Depoimentos em carrossel com fotos e citações.  
-- Seção de habilidades com categorização de hard & soft skills.  
-- Links dinâmicos para LinkedIn, GitHub e sites ao vivo.  
+- **Framework:** Next.js (v14.2.5)
+- **Languages:** TypeScript, JavaScript, HTML5, CSS3
+- **Styling:** Tailwind CSS, tailwind-merge
+- **Animations:** Framer Motion
+- **Text Effects:** nextjs-simple-typewriter, react-typed
+- **SVG Handling:** @svgr/webpack
+- **Form Handling:** react-hook-form, @web3forms/react
+- **Security:** @hcaptcha/react-hcaptcha
 
 ---
 
-## Instalação e Uso
+## Features
 
-1. **Clone o repositório**  
+- Dynamic typewriter animation in the initial section
+- Responsive project gallery with cards and images
+- Highlighted performance and SEO indicators
+- Testimonial carousel with photos and quotes
+- Skills section with hard & soft skills categorization
+- Dynamic links to LinkedIn, GitHub, and live sites
+- Contact form with CAPTCHA integration
+- Mobile-first responsive design
+- Optimized performance and SEO
+
+---
+
+## Installation and Usage
+
+1. **Clone the repository**
+
    ```bash
    git clone https://github.com/juan-evangelista-dev-frontend/portfolio-site-2.git
    cd portfolio-site-2
    ```
 
-2. **Instale as dependências**  
+2. **Install dependencies**
+
    ```bash
    npm install
-   # ou
+   # or
    yarn
    ```
 
-3. **Inicie em modo de desenvolvimento**  
+3. **Start development server**
+
    ```bash
    npm run dev
-   # ou
+   # or
    yarn dev
    ```
-   Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-4. **Build para produção**  
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+4. **Build for production**
+
    ```bash
    npm run build
-   # ou
+   # or
    yarn build
    ```
 
-5. **Inicie o servidor**  
+5. **Start production server**
    ```bash
    npm start
-   # ou
+   # or
    yarn start
    ```
 
 ---
 
-## Scripts Disponíveis
+## Available Scripts
 
-- **`npm run dev`**: Inicia o servidor em modo de desenvolvimento.  
-- **`npm run build`**: Gera a versão otimizada para produção.  
-- **`npm run start`**: Executa o build em um servidor Node.js.  
-- **`npm run lint`**: Analisa código com ESLint.  
+- **`npm run dev`**: Starts the development server
+- **`npm run build`**: Generates optimized production build
+- **`npm run start`**: Runs the build on a Node.js server
+- **`npm run lint`**: Analyzes code with ESLint
 
 ---
 
-## Autor
+## Author
 
 - **Juan Evangelista Nascimento**  
-  Front-End Engineer  
-  - LinkedIn: https://www.linkedin.com/in/juan-evangelista-nascimento  
-  - GitHub: https://github.com/juan-evangelista-dev  
+  Front-End Engineer
+  - LinkedIn: https://www.linkedin.com/in/juan-evangelista-nascimento
+  - GitHub: https://github.com/juan-evangelista-dev
 
 ---
 
-## Licença
+## License
 
-Este projeto está licenciado sob a [MIT License](LICENSE).  
-```
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 ## Project Description
 
-O site de portfólio de Juan Evangelista é uma aplicação Next.js responsiva que apresenta sua trajetória e habilidades como Front-End Engineer. Com animações suaves em Framer Motion e efeitos de digitação usando `nextjs-simple-typewriter`, o site destaca projetos reais (Asics Brazil, Lello Imóveis, To Do App), resultados de performance (melhora de até 40%), e depoimentos de colegas. As seções “About” e “Recommendations” reúnem hard e soft skills, enquanto o rodapé fornece links diretos para LinkedIn e GitHub. Construído com TypeScript, Tailwind CSS e otimizado para SEO e performance, o projeto serve como prova de expertise em criar experiências web elegantes, rápidas e de fácil manutenção.
+Juan Evangelista's portfolio website is a responsive Next.js application that showcases his journey and skills as a Front-End Engineer. With smooth animations using Framer Motion and typewriter effects implemented through `nextjs-simple-typewriter`, the site highlights real-world projects (Asics Brazil, Lello Imóveis, To Do App), performance results (up to 40% improvement), and colleague testimonials. The "About" and "Recommendations" sections showcase both hard and soft skills, while the footer provides direct links to LinkedIn and GitHub. Built with TypeScript and Tailwind CSS, and optimized for SEO and performance, this project serves as proof of expertise in creating elegant, fast, and maintainable web experiences.
