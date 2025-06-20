@@ -10,8 +10,8 @@ function ContactForm() {
 	const {
 		register,
 		handleSubmit,
-		reset,
 		formState: { errors, isSubmitting },
+		setValue,
 	} = useForm({
 		mode: 'onTouched',
 	});
@@ -26,7 +26,12 @@ function ContactForm() {
 		},
 		onSuccess: (msg, data) => {
 			toast.success('Message sent successfully!');
-			reset();
+			setValue('name', '');
+			setValue('company', '');
+			setValue('email', '');
+			setValue('phone', '');
+			setValue('help', '');
+			setValue('message', '');
 		},
 		onError: (msg, data) => {
 			toast.error('An error occurred. Please try again.');
