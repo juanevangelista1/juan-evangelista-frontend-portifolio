@@ -49,7 +49,7 @@ export const HeroSection = () => {
 					/>
 					<div className='hero-top-section'>
 						<div className='bg-green-500 size-2.5 rounded-full relative'>
-							<div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large '></div>
+							<div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'></div>
 						</div>
 						<div>
 							<p className='text-sm font-medium'>Available for new challenges</p>

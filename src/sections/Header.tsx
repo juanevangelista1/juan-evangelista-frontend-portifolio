@@ -25,7 +25,7 @@ export const Header = () => {
 					About
 				</a>
 				<a
-					className='nav-item '
+					className='nav-item bg-slate-100 text-gray-950'
 					href='https://www.linkedin.com/in/juan-evangelista-desenvolvedor/'>
 					Contact
 				</a>

@@ -10,9 +10,9 @@ import { motion } from 'framer-motion';
 
 const portfolioProjects = [
 	{
-		company: 'Asics Brazil',
+		company: 'Asics',
 		year: '2023',
-		title: 'Asics Brazil',
+		title: 'Asics Brazil, Chile and Colombia',
 		results: [
 			{ title: 'Maintenance and evolution of the site' },
 			{ title: 'Improving performance by 40%' },

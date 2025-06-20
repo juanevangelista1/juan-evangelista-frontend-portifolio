@@ -1,6 +1,6 @@
 'use client';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
-import ContactForm from '@/components/contactForm';
+import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 
 export const ContactSection = () => {
@@ -9,24 +9,19 @@ export const ContactSection = () => {
 			initial={{ opacity: 0, y: 30 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1 }}
-			className='py-16 pt-12 '>
-			{/* <motion.div
-				initial={{ opacity: 0, y: 30 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 1 }}
-				className='py-16 container'>
-				<ContactForm />
-			</motion.div> */}
+			className='py-16 pt-12'
+			id='contact'>
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1 }}
 				className='container'>
+				<ContactForm />
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1 }}
-					className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 rounded-3xl py-8 px-10 text-center md:text-left'>
+					className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 rounded-3xl py-8 px-10 text-center md:text-left mt-12'>
 					<motion.div
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -50,9 +45,9 @@ export const ContactSection = () => {
 							href='https://www.linkedin.com/in/juan-evangelista-desenvolvedor/'
 							target='_blank'
 							rel='noopener noreferrer'>
-							<button className='text-white bg-gray-900 rounded-xl px-6 py-2 h-12 w-max inline-flex items-center gap-2 hover:bg-gray-800 transition duration-300'>
+							<button className='text-white bg-gray-900 rounded-xl px-6 py-2 h-12 w-max inline-flex items-center gap-2 group transition-colors duration-300'>
 								<span className='font-semibold'>Contact Me</span>
-								<ArrowUpRightIcon className='size-4 ' />
+								<ArrowUpRightIcon className='size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
 							</button>
 						</a>
 					</motion.div>

@@ -1,4 +1,4 @@
-import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
+import { ArrowUpRight } from '@/components/icons/ArrowUpRight';
 
 const Footerlinks = [
 	{
@@ -19,7 +19,7 @@ export const Footer = () => {
 				<div className='border-t border-white/15  py-6 text-sm flex flex-col items-center gap-8 md:flex-row md:gap-16 md:justify-between'>
 					<div className='text-white/40'>
 						<span>
-							Made with a lot of care for you to get to know a little about me! | &copy; 2025 all rights
+							Made with a lot 💚 for you to get to know a little about me! | &copy; 2025 all rights
 							Reserved
 						</span>
 					</div>
@@ -28,16 +28,16 @@ export const Footer = () => {
 							<a
 								key={link.title}
 								href={link.href}
-								className='text-white inline-flex items-center gap-1.5'>
+								className='text-white inline-flex items-center gap-1.5 group transition-colors hover:text-emerald-300 duration-300'>
 								<span className='font-semibold'>{link.title}</span>
-								<ArrowUpRightIcon className='size-4' />
+								<ArrowUpRight className='size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
 							</a>
 						))}
 						<a
-							className='text-white inline-flex items-center gap-1.5'
+							className='text-white inline-flex items-center gap-1.5 group transition-colors hover:text-emerald-300 duration-300'
 							href='mailto:juan.evangelista.nascimentoo@gmail.com'>
 							<span className='font-semibold'>E-mail</span>
-							<ArrowUpRightIcon className='size-4' />
+							<ArrowUpRight className='size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
 						</a>
 					</nav>
 				</div>

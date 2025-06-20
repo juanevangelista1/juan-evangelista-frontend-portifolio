@@ -109,10 +109,11 @@ export const AboutSection = () => {
 									transition={{ duration: 1 }}
 									className='inline-flex items-center gap-2 px-6'>
 									<span className='font-medium  text-gray-300'>
-										With over 3 years in Front-End, I've specialized in JavaScript, React.js, TypeScript,
-										Next.js, and more. I focus on creating user-friendly, high-performance applications that
-										not only meet user needs but also provide exceptional experiences. Writing clean,
-										efficient code is a priority for me, ensuring maintainability and scalability.
+										Front-End Engineer with 3 years of experience in developing high-quality web applications,
+										focused on business results and user experience. Specialized in JavaScript (ES6+),
+										React.js, TypeScript, Next.js, Performance Optimization, SEO and Node.js. A proactive,
+										resilient, and problem-solving oriented professional committed to high-impact deliveries
+										and clean, efficient, and well-documented code.
 									</span>
 								</motion.div>
 							</motion.div>
