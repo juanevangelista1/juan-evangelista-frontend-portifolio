@@ -91,7 +91,7 @@ export const AboutSection = () => {
 								itemsWrapperClassName='animate-move-right [animation-duration:35s]'
 							/>
 						</Cards>
-						<Cards className='lg:h-[320px] md:h-[320px] h-[400px] p-0 flex flex-col lg:col-span-1'>
+						<Cards className='lg:h-[320px] md:h-[320px] h-[450px] p-0 flex flex-col lg:col-span-1'>
 							<CardHeader
 								title='Hard Skills'
 								description='Know me better through my hard skills'
