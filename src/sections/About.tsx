@@ -109,7 +109,7 @@ export const AboutSection = () => {
 									transition={{ duration: 1 }}
 									className='inline-flex items-center gap-2 px-6'>
 									<span className='font-medium  text-gray-300'>
-										Front-End Engineer with 3 years of experience in developing high-quality web applications,
+										Front-End Engineer with 4 years of experience in developing high-quality web applications,
 										focused on business results and user experience. Specialized in JavaScript (ES6+),
 										React.js, TypeScript, Next.js, Performance Optimization, SEO and Node.js. A proactive,
 										resilient, and problem-solving oriented professional committed to high-impact deliveries

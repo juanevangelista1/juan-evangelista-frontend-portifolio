@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 		siteName: 'Juan Evangelista Portfolio',
 		images: [
 			{
-				url: '/og-image.jpg',
+				url: '/meta-photo.png',
 				width: 1200,
 				height: 630,
 				alt: 'Juan Evangelista - Frontend Engineer',

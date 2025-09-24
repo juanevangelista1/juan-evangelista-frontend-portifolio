@@ -3,6 +3,8 @@ import { Cards } from '../cards/cards';
 import AsicsImage from '@/assets/images/asics-brazil.png';
 import LelloImage from '@/assets/images/lello-imoveis.png';
 import ToDoAppImage from '@/assets/images/To-do-app.png';
+import M3Image from '@/assets/images/M3.png';
+import DTImage from '@/assets/images/dtBrasil.png';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import Image from 'next/image';
@@ -32,6 +34,30 @@ const portfolioProjects = [
 		],
 		link: 'https://www.lelloimoveis.com.br/',
 		image: LelloImage,
+	},
+	{
+		company: 'M3 Digital Solutions',
+		year: '2025',
+		title: 'Front-End Engineer Partner at M3 Digital Solutions',
+		results: [
+			{ title: 'Maintained and monitored the site' },
+			{ title: 'Evolution and refinement of layout using best practices' },
+			{ title: 'Increased SEO and search engine positioning' },
+		],
+		link: 'https://www.m3solucoesdigitais.com/',
+		image: M3Image,
+	},
+	{
+		company: 'DT Brasil',
+		year: '2025',
+		title: 'Main Front-End Engineer at DT Brasil',
+		results: [
+			{ title: 'Responsible for layout and UI/UX design' },
+			{ title: '360° project creation and development' },
+			{ title: 'SEO evolution, maintenance, and optimization' },
+		],
+		link: 'https://www.dtbrasil.com.br/',
+		image: DTImage,
 	},
 	{
 		company: 'Pessoal Project',

@@ -63,7 +63,6 @@ export default function ContactForm() {
 			<form
 				onSubmit={handleSubmit(handleForm)}
 				className='space-y-6'>
-				{/* Nome */}
 				<div>
 					<label
 						htmlFor='name'
@@ -80,7 +79,6 @@ export default function ContactForm() {
 					{errors.name && <p className='mt-1 text-red-400 text-sm'>{errors.name.message}</p>}
 				</div>
 
-				{/* Empresa (opcional) */}
 				<div>
 					<label
 						htmlFor='company'
@@ -96,7 +94,6 @@ export default function ContactForm() {
 					/>
 				</div>
 
-				{/* Email */}
 				<div>
 					<label
 						htmlFor='email'
@@ -116,7 +113,6 @@ export default function ContactForm() {
 					{errors.email && <p className='mt-1 text-red-400 text-sm'>{errors.email.message}</p>}
 				</div>
 
-				{/* Telefone/WhatsApp */}
 				<div>
 					<label
 						htmlFor='phone'
@@ -158,7 +154,6 @@ export default function ContactForm() {
 					{errors.phone && <p className='mt-1 text-red-400 text-sm'>{errors.phone.message}</p>}
 				</div>
 
-				{/* Mensagem */}
 				<div>
 					<label
 						htmlFor='message'
@@ -175,7 +170,6 @@ export default function ContactForm() {
 					{errors.message && <p className='mt-1 text-red-400 text-sm'>{errors.message.message}</p>}
 				</div>
 
-				{/* Honeypot para bots – campo invisível */}
 				<input
 					type='checkbox'
 					name='botcheck'
@@ -183,7 +177,6 @@ export default function ContactForm() {
 					style={{ display: 'none' }}
 				/>
 
-				{/* hCaptcha para validação humana */}
 				<HCaptcha
 					sitekey='50b2fe65-b00b-4b9e-ad62-3ba471098be2'
 					onVerify={(token) => setValue('h-captcha-response', token)}
@@ -193,7 +186,6 @@ export default function ContactForm() {
 					{...register('h-captcha-response')}
 				/>
 
-				{/* Botão de envio */}
 				<button
 					type='submit'
 					disabled={isSubmitting || status === 'sending'}
@@ -202,7 +194,6 @@ export default function ContactForm() {
 				</button>
 			</form>
 
-			{/* Modal de sucesso */}
 			{showModal && (
 				<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm'>
 					<div className='bg-white rounded-2xl shadow-lg max-w-md w-full p-6 relative'>
@@ -223,7 +214,6 @@ export default function ContactForm() {
 				</div>
 			)}
 
-			{/* Erro geral */}
 			{status === 'error' && <p className='mt-4 text-red-400'>❌ {responseMessage}</p>}
 		</>
 	);
