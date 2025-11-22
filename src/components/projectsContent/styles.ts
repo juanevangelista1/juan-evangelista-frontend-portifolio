@@ -164,7 +164,7 @@ export const MetaTag = styled.div`
 	gap: 0.5rem;
 	font-size: 0.875rem;
 	font-weight: 700;
-	background: linear-gradient(to right, #60a5fa, #34d399); /* Blue to Green */
+	background: linear-gradient(to right, #60a5fa, #34d399);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin-bottom: 0.5rem;

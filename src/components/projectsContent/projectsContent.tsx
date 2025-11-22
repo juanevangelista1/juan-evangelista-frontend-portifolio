@@ -163,17 +163,12 @@ export function ProjectsContent() {
 										</li>
 									))}
 								</ResultsList>
-
 								<ActionButton
 									href={project.link}
 									target='_blank'
-									rel='noopener noreferrer'
-									className='transition-colors hover:text-emerald-500 duration-300'>
+									rel='noopener noreferrer'>
 									<span>Visit Live Site</span>
-									<ArrowUpRight
-										size={16}
-										className='transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5'
-									/>
+									<ArrowUpRight size={16} />
 								</ActionButton>
 							</InfoContainer>
 						</SwiperSlide>
