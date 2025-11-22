@@ -1,14 +1,34 @@
 'use client';
-import { Cards } from '../cards/cards';
+
+import React, { useMemo } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+// Substituindo SVGs por Lucide para compatibilidade imediata
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowUpRight } from 'lucide-react';
+
+import {
+	SectionContainer,
+	CarouselWrapper,
+	ProjectCard,
+	InfoContainer,
+	Title,
+	NavButton,
+	GlowEffect,
+	MetaTag,
+	ResultsList,
+	ActionButton,
+} from './styles';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+// Seus imports de imagem (Certifique-se que os caminhos estão corretos no seu projeto)
 import AsicsImage from '@/assets/images/asics-brazil.png';
 import LelloImage from '@/assets/images/lello-imoveis.png';
 import ToDoAppImage from '@/assets/images/To-do-app.png';
 import M3Image from '@/assets/images/M3.png';
 import DTImage from '@/assets/images/dtBrasil.png';
-import CheckCircleIcon from '@/assets/icons/check-circle.svg';
-import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 const portfolioProjects = [
 	{
@@ -30,7 +50,7 @@ const portfolioProjects = [
 		results: [
 			{ title: 'Maintained and monitored the site' },
 			{ title: 'Increased performance by 28%' },
-			{ title: 'Increased SEO and search engine positioning' },
+			{ title: 'Increased SEO positioning' },
 		],
 		link: 'https://www.lelloimoveis.com.br/',
 		image: LelloImage,
@@ -38,11 +58,10 @@ const portfolioProjects = [
 	{
 		company: 'M3 Digital Solutions',
 		year: '2025',
-		title: 'Front-End Engineer Partner at M3 Digital Solutions',
+		title: 'Partner at M3 Digital Solutions',
 		results: [
-			{ title: 'Maintained and monitored the site' },
-			{ title: 'Evolution and refinement of layout using best practices' },
-			{ title: 'Increased SEO and search engine positioning' },
+			{ title: 'Evolution and refinement of layout' },
+			{ title: 'Implementation of best practices' },
 		],
 		link: 'https://www.m3solucoesdigitais.com/',
 		image: M3Image,
@@ -52,9 +71,8 @@ const portfolioProjects = [
 		year: '2025',
 		title: 'Main Front-End Engineer at DT Brasil',
 		results: [
-			{ title: 'Responsible for layout and UI/UX design' },
 			{ title: '360° project creation and development' },
-			{ title: 'SEO evolution, maintenance, and optimization' },
+			{ title: 'SEO evolution and optimization' },
 		],
 		link: 'https://www.dtbrasil.com.br/',
 		image: DTImage,
@@ -66,7 +84,6 @@ const portfolioProjects = [
 		results: [
 			{ title: 'Personal project for daily activities' },
 			{ title: 'Use of architecture best practices' },
-			{ title: 'Project focus on daily productivity' },
 		],
 		link: 'https://to-do-app-roan-seven.vercel.app/',
 		image: ToDoAppImage,
@@ -74,75 +91,95 @@ const portfolioProjects = [
 ];
 
 export function ProjectsContent() {
-	return (
-		<motion.div
-			initial={{ opacity: 0, y: 30 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}
-			className='flex flex-col mt-10 md:mt-20 gap-20'>
-			{portfolioProjects.map((project, projectIndex) => (
-				<Cards
-					className='card-projects-style pb-0 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky'
-					key={project.title}
-					style={{
-						top: `calc(64px + ${projectIndex * 40}px)`,
-					}}>
-					<motion.div
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 1 }}
-						className='lg:grid lg:grid-cols-2 lg:gap-16 '>
-						<motion.div
-							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 1 }}
-							className='lg:pb-16'>
-							<motion.div
-								initial={{ opacity: 0, y: 30 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 1 }}
-								className='text-gradients-blue-to-green inline-flex gap-2'>
-								<span className='font-bold text-sm'>{project.company}</span>
-								<span>&bull;</span>
-								<span className='font-bold text-sm'>{project.year}</span>
-							</motion.div>
+	const swiperConfig = useMemo(
+		() => ({
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 'auto' as const,
+			loop: true,
+			speed: 600,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 0,
+				depth: 350,
+				modifier: 1.5,
+				slideShadows: true,
+				scale: 1.2,
+			},
+			navigation: {
+				nextEl: '.custom-next',
+				prevEl: '.custom-prev',
+			},
+			pagination: { clickable: true },
+			modules: [EffectCoverflow, Pagination, Navigation, Autoplay],
+		}),
+		[]
+	);
 
-							<h3 className='font-serif text-2xl mt-2 md:text-4xl md:mt-5'>{project.title}</h3>
-							<hr className='border-t-2 border-white/5 mt-4 md:mt-5' />
-							<ul className='flex flex-col gap-4 mt-4 md:mt-5'>
-								{project.results.map((result) => (
-									<li
-										key={result.title}
-										className='flex items-center gap-2 text-sm md:text-base text-white/60'>
-										<CheckCircleIcon className='size-5 md:size-6' />
-										<span>{result.title}</span>
-									</li>
-								))}
-							</ul>
-							<a
-								href={project.link}
-								target='_blank'
-								rel='noopener noreferrer'>
-								<button className='bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-gray-100 transition-all duration-300 '>
+	return (
+		<SectionContainer>
+			<CarouselWrapper>
+				<GlowEffect />
+
+				<NavButton className='custom-prev'>
+					<ChevronLeft
+						size={24}
+						strokeWidth={2.5}
+					/>
+				</NavButton>
+
+				<NavButton className='custom-next'>
+					<ChevronRight
+						size={24}
+						strokeWidth={2.5}
+					/>
+				</NavButton>
+
+				<Swiper {...swiperConfig}>
+					{portfolioProjects.map((project, index) => (
+						<SwiperSlide
+							key={`${project.company}-${index}`}
+							style={{ width: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+							<ProjectCard $bgImage={project.image.src} />
+
+							<InfoContainer>
+								<MetaTag>
+									<span>{project.company}</span>
+									<span>•</span>
+									<span>{project.year}</span>
+								</MetaTag>
+
+								<Title>{project.title}</Title>
+
+								<ResultsList>
+									{project.results.map((result, idx) => (
+										<li key={idx}>
+											<CheckCircle
+												size={16}
+												className='text-emerald-400'
+											/>
+											<span>{result.title}</span>
+										</li>
+									))}
+								</ResultsList>
+
+								<ActionButton
+									href={project.link}
+									target='_blank'
+									rel='noopener noreferrer'
+									className='transition-colors hover:text-emerald-500 duration-300'>
 									<span>Visit Live Site</span>
-									<ArrowUpRightIcon className='size-4 ' />
-								</button>
-							</a>
-						</motion.div>
-						<motion.div
-							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 1 }}
-							className='relative'>
-							<Image
-								className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
-								src={project.image}
-								alt={project.title}
-							/>
-						</motion.div>
-					</motion.div>
-				</Cards>
-			))}
-		</motion.div>
+									<ArrowUpRight
+										size={16}
+										className='transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5'
+									/>
+								</ActionButton>
+							</InfoContainer>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</CarouselWrapper>
+		</SectionContainer>
 	);
 }
