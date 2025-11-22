@@ -8,7 +8,6 @@ export const SectionContainer = styled.section`
 `;
 
 export const CarouselWrapper = styled.div`
-	overflow: hidden;
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -69,8 +68,8 @@ export const ProjectCard = styled.div<{ $bgImage: string }>`
 
 	transition: all 0.3s ease-out;
 
-	width: 280px;
-	height: 200px;
+	width: 300px;
+	height: 220px;
 
 	@media screen and (min-width: 640px) {
 		width: 450px;
@@ -143,6 +142,7 @@ export const InfoContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	width: 100%;
 	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
 	opacity: 0;
@@ -173,7 +173,7 @@ export const MetaTag = styled.div`
 `;
 
 export const Title = styled.h3`
-	font-size: 1.75rem;
+	font-size: 1.2rem;
 	color: white;
 	margin-bottom: 1rem;
 	@media (min-width: 768px) {

@@ -3,7 +3,6 @@
 import React, { useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
-// Substituindo SVGs por Lucide para compatibilidade imediata
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowUpRight } from 'lucide-react';
 
 import {
@@ -23,7 +22,6 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-// Seus imports de imagem (Certifique-se que os caminhos estão corretos no seu projeto)
 import AsicsImage from '@/assets/images/asics-brazil.png';
 import LelloImage from '@/assets/images/lello-imoveis.png';
 import ToDoAppImage from '@/assets/images/To-do-app.png';
@@ -38,7 +36,7 @@ const portfolioProjects = [
 		results: [
 			{ title: 'Maintenance and evolution of the site' },
 			{ title: 'Improving performance by 40%' },
-			{ title: 'Constant evolution to ensure a better user experience' },
+			{ title: 'Constant evolution' },
 		],
 		link: 'https://www.asics.com.br',
 		image: AsicsImage,
@@ -50,7 +48,7 @@ const portfolioProjects = [
 		results: [
 			{ title: 'Maintained and monitored the site' },
 			{ title: 'Increased performance by 28%' },
-			{ title: 'Increased SEO positioning' },
+			{ title: 'Increased SEO' },
 		],
 		link: 'https://www.lelloimoveis.com.br/',
 		image: LelloImage,
@@ -69,7 +67,7 @@ const portfolioProjects = [
 	{
 		company: 'DT Brasil',
 		year: '2025',
-		title: 'Main Front-End Engineer at DT Brasil',
+		title: 'Front-End Engineer at DT Brasil',
 		results: [
 			{ title: '360° project creation and development' },
 			{ title: 'SEO evolution and optimization' },
@@ -78,7 +76,7 @@ const portfolioProjects = [
 		image: DTImage,
 	},
 	{
-		company: 'Pessoal Project',
+		company: 'Front-End Engineer Project',
 		year: '2024',
 		title: 'To Do App',
 		results: [
